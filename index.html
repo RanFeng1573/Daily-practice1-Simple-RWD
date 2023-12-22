@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="./assets/style.css">
+  
+  <title>Frontend Mentor | FAQ accordion</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+
+  <header></header>
+
+  <main>
+    <div class="head">
+      <img src="./assets/images/icon-star.svg" alt="">
+      <h2>FAQs</h2>
+    </div>
+  
+    <div class="question">
+      <div class="ques">
+        <p class="mark">What is Frontend Mentor, and how will it help me?</p>
+        <img src="./assets/images/icon-plus.svg" alt="">
+      </div>
+    
+      <div class = "hidden">
+        Frontend Mentor offers realistic coding challenges to help developers improve their frontend coding skills with projects in HTML, CSS, and JavaScript. t's suitable for all levels and ideal for portfolio building.
+      </div>
+    </div>
+
+    
+    <div class="question">
+      <div class="ques">
+        <p class="mark">Is Frontend Mentor free?</p>
+        <img src="./assets/images/icon-plus.svg" alt="">
+      </div>
+    
+      <div class = "hidden">
+        Yes, Frontend Mentor offers both free and premium coding challenges, with the free option providing access to a range of projects suitable for all skill levels.
+      </div>
+    </div>
+  
+    <div class="question">
+      <div class="ques">
+        <p class="mark">Can I use Frontend Mentor projects in my portfolio?</p>
+        <img src="./assets/images/icon-plus.svg" alt="">
+      </div>
+    
+      <div class = "hidden">
+        Yes, you can use projects completed on Frontend Mentor in your portfolio. It's an excellent way to showcase your skills to potential employers!
+      </div>
+    </div>
+  
+    <div class="question">
+      <div class="ques">
+        <p class="mark">How can I get help if I'm stuck on a Frontend Mentor challenge?</p>
+        <img src="./assets/images/icon-plus.svg" alt="">
+      </div>
+     
+      <div class = "hidden">
+        The best place to get help is inside Frontend Mentor's Discord community. There's a help channel where you can ask questions and seek support from other community members.
+      </div>
+    </div>
+  </main>
+
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+
+  <script>
+    let imgButtons = document.querySelectorAll('img');
+
+    imgButtons.forEach((btn)=>{
+      btn.addEventListener('click',()=>{
+        let par = btn.parentNode;
+        let gra = par.parentNode;
+
+        let hid = gra.children[1];
+
+        if(hid.classList.contains('hidden')){
+          // hid.style.display = 'block';
+          // console.log('hello');
+          hid.classList.remove('hidden');
+          hid.classList.add('look');
+          btn.src = './assets/images/icon-minus.svg';
+        }else{
+          hid.classList.remove('look');
+          hid.classList.add('hidden');
+          btn.src = './assets/images/icon-plus.svg';
+        }
+      })
+    })
+  </script>
+</body>
+
+</html>
