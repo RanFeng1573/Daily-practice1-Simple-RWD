@@ -86,10 +86,12 @@ main{
 
 .hidden{
     margin-top: 10px;
-    height: 0px;
+    /* height: 0px; */
+    max-height: 0px;
     overflow-y:hidden;
-    transition: height 0.5s ease;
-    
+    transition: max-height 1s ease;
+    /* transition: height 1s ease; */
+    /* background-color: red; */
 }
 
 .look{

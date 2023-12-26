@@ -88,12 +88,13 @@
         let hid = gra.children[1];
 
         if(!hid.classList.contains('look')){
-          hid.style.height = '80px';
+          hid.style.maxHeight = '100px';
+          // hid.style.height = '80px';
           btn.src = './assets/images/icon-minus.svg';
           hid.classList.add('look');
         }else{
-          hid.style.height = '0px';
-
+          hid.style.maxHeight = '0px';
+          // hid.style.height = '0px';
           btn.src = './assets/images/icon-plus.svg';
           hid.classList.remove('look');
         }
