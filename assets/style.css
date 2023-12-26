@@ -81,14 +81,19 @@ main{
 }
 .ques .mark{
     font-weight: bolder;
+
 }
 
 .hidden{
-    display: none;
+    margin-top: 10px;
+    height: 0px;
+    overflow-y:hidden;
+    transition: height 0.5s ease;
+    
 }
 
 .look{
-    margin-top: 10px;
+    /* margin-top: 10px; */
 }
 
 

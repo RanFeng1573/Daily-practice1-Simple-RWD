@@ -87,17 +87,18 @@
 
         let hid = gra.children[1];
 
-        if(hid.classList.contains('hidden')){
-          // hid.style.display = 'block';
-          // console.log('hello');
-          hid.classList.remove('hidden');
-          hid.classList.add('look');
+        if(!hid.classList.contains('look')){
+          hid.style.height = '80px';
           btn.src = './assets/images/icon-minus.svg';
+          hid.classList.add('look');
         }else{
-          hid.classList.remove('look');
-          hid.classList.add('hidden');
+          hid.style.height = '0px';
+
           btn.src = './assets/images/icon-plus.svg';
+          hid.classList.remove('look');
         }
+
+        
       })
     })
   </script>
